@@ -1,0 +1,161 @@
+/* Basic styles */
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Logo styles */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* Header styles */
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+/* App-link styles */
+.App-link {
+  color: #61dafb;
+}
+
+/* Keyframe animation for spinning logo */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Burger menu for mobile */
+.burger-menu {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.burger-menu svg {
+  width: 30px;
+  height: 30px;
+  stroke: #333;
+}
+
+/* Navigation styles */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  background: #f4f4f4;
+  padding: 10px;
+}
+
+.navigation.show {
+  display: block;
+}
+
+.navigation ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation li {
+  margin-right: 10px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: normal;
+  font-size: 16px;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #0073e6;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: #0073e6;
+}
+
+/* Action buttons */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.action-buttons button {
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.action-buttons button:hover {
+  opacity: 0.8;
+}
+
+/* Primary and secondary buttons */
+.primary {
+  background-color: #0073e6;
+  color: white;
+  border: none;
+}
+
+.secondary {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  color: #333;
+}
+
+/* Mobile view styles */
+@media (max-width: 760px) {
+  .burger-menu {
+    display: block;
+  }
+
+  .navigation {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navigation.show {
+    display: flex;
+  }
+
+  .navigation ul {
+    flex-direction: column;
+    padding-top: 10px;
+  }
+
+  .navigation li {
+    margin: 10px 0;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
